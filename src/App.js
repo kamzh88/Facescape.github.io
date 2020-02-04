@@ -7,13 +7,20 @@ import Photo from "./components/Photo";
 import images from "./image.json";
 
 function App() {
-    console.log(images);
+
     return (
         <Wrapper>
             <Navbar></Navbar>
             <Header></Header>
             <Body>
-                <Photo images={images}></Photo>
+                {images.map(image => (
+                    <Photo
+                        image={image.image}
+                        name={image.name}
+                    />
+                ))}
+
+
             </Body>
         </Wrapper>
 
