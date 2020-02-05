@@ -15,12 +15,11 @@ function App() {
             <Body>
                 {images.map(image => (
                     <Photo
+                        key={image.id}
                         image={image.image}
                         name={image.name}
                     />
                 ))}
-
-
             </Body>
         </Wrapper>
 
