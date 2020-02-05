@@ -9,15 +9,14 @@ const styles = {
     }
 }
 
+const imageClick = () => {
+    console.log("Clicked");
+}
+
 function Photo(props) {
-    // console.log(props);
+
     return (
-
-        // <div className="img-container">
-            <img style={styles.CardStyle} alt={props.name} src={props.image} key={props.id} />
-        // </div>
-
-
+        <img style={styles.CardStyle} alt={props.name} src={props.image} key={props.id} onClick={() => imageClick()}/>
     )
 }
 

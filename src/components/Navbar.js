@@ -2,10 +2,12 @@ import React from "react";
 
 const styles = {
     navBarStyle: {
-        background: "#5133a4"
+        background: "#5133a4",
+        position: "fixed",
+        width: "100%"
     },
     navBar: {
-        color: "#fff"
+        color: "#fff",
     }
 }
 
