@@ -15,6 +15,7 @@ function App() {
             <Body>
                 {images.map(image => (
                     <Photo
+                        id={image.id}
                         key={image.id}
                         image={image.image}
                         name={image.name}

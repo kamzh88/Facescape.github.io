@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 
 const styles = {
     CardStyle: {
@@ -9,15 +9,22 @@ const styles = {
     }
 }
 
-const imageClick = () => {
-    console.log("Clicked");
-}
+class Photo extends Component {
 
-function Photo(props) {
 
-    return (
-        <img style={styles.CardStyle} alt={props.name} src={props.image} key={props.id} onClick={() => imageClick()}/>
-    )
+    imageClick = event => {
+        event.preventDefault();
+        let ID = event.target.id;
+        console.log(ID);
+    }
+
+
+    render() {
+
+        return (
+            <img style={styles.CardStyle} alt={this.props.name} src={this.props.image} id={this.props.id} onClick={this.imageClick} />
+        )
+    }
 }
 
 export default Photo;
