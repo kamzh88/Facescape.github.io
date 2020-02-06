@@ -15,7 +15,7 @@ class Photo extends Component {
 
     render() {
         return (
-            <img style={styles.CardStyle} alt={this.props.name} src={this.props.image} key={this.props.id} id={this.props.id} onClick={() => this.props.imageClick(this.props.id)} />
+            <img style={styles.CardStyle} alt={this.props.name} src={this.props.image} id={this.props.id} onClick={() => this.props.imageClick(this.props.id)} />
         )
     }
 }

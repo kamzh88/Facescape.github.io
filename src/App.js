@@ -9,40 +9,41 @@ import images from "./image.json";
 class App extends Component {
 
     state = {
-        images
+        images: this.loadImage
+    };
+
+    imageClick = event => {
+        const images = this.loadImage();
+        this.setState({ images })
     }
 
-    // imageClick = id => {
-    //     console.log(id);
-
-    // }
+    loadImage() {
+        while (images.length > 0) {
+            let image = images.sort(() => 0.5 - Math.random())
+            image = images.splice(image, 1);
+            images.push(image[0]);  
+            return this.setState({images})
+        }
+    }
 
     render() {
-        const imagesArray = [];
-        function createArrayOfNumbers() {
-            while (images.length > 0) {
-                let image = Math.floor(Math.random() * images.length);
-                image = images.splice(image, 1);
-                imagesArray.push(image[0]);
-            }
-            console.log(imagesArray);
-        }
-        
-        createArrayOfNumbers();
         return (
             <Wrapper>
                 <Navbar></Navbar>
                 <Header></Header>
                 <Body>
-                    {imagesArray.map(image => (
+                    {
+                    images.map(image => (
                         <Photo
                             imageClick={this.imageClick}
+                            images={this.state.images}
                             id={image.id}
                             key={image.id}
                             image={image.image}
                             name={image.name}
                         />
-                    ))}
+                    ))
+                    }
                 </Body>
             </Wrapper >
         )
