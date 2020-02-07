@@ -6,30 +6,47 @@ import Body from "./components/Body";
 import Photo from "./components/Photo";
 import images from "./image.json";
 
-// 1. Work on the logic for when we click on the ids.
 // 2. Work on the score count and the top score.
 // 3. Add a bit more styling on the page.
+// 4. Have the picture shake if we already click on that ID.
 
 class App extends Component {
 
     state = {
         images,
         score: 0,
-        topScore: 0
+        topScore: 0,
+        clickID: []
     };
 
     componentDidMount() {
         this.loadImage();
     }
 
+
     imageClick = id => {
-        const newState = { ...this.state};
+        const newState = { ...this.state };
         let score = newState.score;
         let topScore = newState.topScore;
-        topScore += 1;
-        score += 1;
-        this.setState({ score: score, topScore: topScore });
-        this.loadImage();
+        let clickID = this.state.clickID;
+        console.log(images);
+        if (clickID.length === 0) {
+            score++
+            clickID.push(id);
+            this.setState({ score: score, topScore: topScore, clickID: this.state.clickID });
+            this.loadImage();
+        } else {
+            if (clickID.includes(id)) {
+                alert("You Lose");
+                this.setState({score: 0, topScore: topScore, clickID: []})
+                this.loadImage();
+            } else if (!clickID.includes(id)) {
+                score++
+                clickID.push(id);
+                this.setState({ score: score, topScore: topScore, clickID: this.state.clickID });
+                this.loadImage();
+            }
+        }
     }
 
     loadImage() {
@@ -38,7 +55,6 @@ class App extends Component {
     }
 
     render() {
-        
         return (
             <Wrapper>
                 <Navbar score={this.state.score} topScore={this.state.topScore}>
