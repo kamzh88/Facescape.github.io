@@ -1,4 +1,5 @@
 import React from "react";
+import ScoreCard from "./ScoreCard";
 
 const styles = {
     navBarStyle: {
@@ -12,11 +13,16 @@ const styles = {
 }
 
 function Navbar(props) {
+
     return (
         <nav style={styles.navBarStyle} className="navbar">
             <div style={styles.navBar} className="navbar-brand">Click Game</div>
             <div style={styles.navBar} className="navbar-brand">Click an image to begin!</div>
-            <div style={styles.navBar} className="navbar-brand">Score: 0 | Top Score: 0</div>
+            <div style={styles.navBar} className="navbar-brand">
+                <ScoreCard score={props.score} topScore={props.topScore}>
+                
+                </ScoreCard>
+            </div>
         </nav>
     )
 }
