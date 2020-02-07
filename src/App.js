@@ -6,10 +6,6 @@ import Body from "./components/Body";
 import Photo from "./components/Photo";
 import images from "./image.json";
 
-// 2. Work on the score count and the top score.
-// 3. Add a bit more styling on the page.
-// 4. Have the picture shake if we already click on that ID.
-
 class App extends Component {
 
     state = {
@@ -31,19 +27,23 @@ class App extends Component {
         if (clickID.length === 0) {
             score++
             clickID.push(id);
-            this.setState({ score: score, topScore: topScore, clickID: this.state.clickID }); 
+            this.setState({ score: score, clickID: this.state.clickID });
         } else {
             if (clickID.includes(id)) {
                 alert("You Lose");
-                this.setState({score: 0, topScore: topScore, clickID: []})
+                this.setState({ score: 0, clickID: [] })
             } else if (!clickID.includes(id)) {
                 score++
                 clickID.push(id);
-                this.setState({ score: score, topScore: topScore, clickID: this.state.clickID });       
+                this.setState({ score: score, clickID: this.state.clickID });
+                if (score === 12) {
+                    alert("You Win!");
+                    this.setState({ score: 0, chickID: [] });
+                }
             }
         }
-        if (score === 12) {
-            alert("You Win!")
+        if (score > topScore) {
+            this.setState({ topScore: score })
         }
         this.loadImage();
     }
@@ -68,7 +68,6 @@ class App extends Component {
                             key={image.id}
                             image={image.image}
                             name={image.name}
-
                         />
                     ))}
                 </Body>

@@ -6,16 +6,16 @@ const styles = {
         height: "170px",
         width: "170px",
         margin: "8px 25px",
-    }
+    },
 }
 
 class Photo extends Component {
 
-
-
     render() {
         return (
-            <img style={styles.CardStyle} alt={this.props.name} src={this.props.image} id={this.props.id} onClick={() => this.props.imageClick(this.props.id)} />
+           
+                <img style={styles.CardStyle} alt={this.props.name} src={this.props.image} id={this.props.id} onClick={() => this.props.imageClick(this.props.id)} />
+
         )
     }
 }
