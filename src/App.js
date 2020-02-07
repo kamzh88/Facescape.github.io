@@ -18,6 +18,10 @@ class App extends Component {
         topScore: 0
     };
 
+    componentDidMount() {
+        this.loadImage();
+    }
+
     imageClick = id => {
         const newState = { ...this.state};
         let score = newState.score;
@@ -35,8 +39,6 @@ class App extends Component {
 
     render() {
         
-        images.sort(() => 0.5 - Math.random());
-
         return (
             <Wrapper>
                 <Navbar score={this.state.score} topScore={this.state.topScore}>
