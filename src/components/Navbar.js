@@ -4,27 +4,27 @@ import ScoreCard from "./ScoreCard";
 const styles = {
     navBarStyle: {
         background: "#5133a4",
-        position: "fixed",
         width: "100%"
     },
     navBar: {
         color: "#fff",
-        fontSize: "1.6rem"
+        fontSize: "100%"
     },
     navName: {
         color: "#fff",
-        fontSize: "1.6rem"
+        fontSize: "120%"
     },
     score: {
         color: "#fff",
-        fontSize: ".9rem"
+        fontSize: "100%"
     }
+    
 }
 
 function Navbar(props) {
 
     return (
-        <nav style={styles.navBarStyle} className="navbar">
+        <nav style={styles.navBarStyle} className="navbar fixed-top">
             <div style={styles.navBar} className="navbar-brand">Clicky Game</div>
             <div style={styles.navName} className="navbar-brand">Click an image to begin!</div>
             <div style={styles.score} className="navbar-brand">
@@ -33,6 +33,7 @@ function Navbar(props) {
                 </ScoreCard>
             </div>
         </nav>
+        
     )
 }
 

@@ -56,8 +56,7 @@ class App extends Component {
     render() {
         return (
             <Wrapper>
-                <Navbar score={this.state.score} topScore={this.state.topScore}>
-                </Navbar>
+                <Navbar score={this.state.score} topScore={this.state.topScore}></Navbar>
                 <Header></Header>
                 <Body>
                     {this.state.images.map(image => (
