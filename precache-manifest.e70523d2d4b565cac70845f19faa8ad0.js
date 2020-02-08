@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "41eaaace7569a11e83c275def063a1fb",
+    "revision": "76423d9aee68f536145331c1d1595190",
     "url": "/Facescape.github.io/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Facescape.github.io/static/js/2.4f81e427.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e9a3bd13862279299dd6",
-    "url": "/Facescape.github.io/static/js/main.daf4d65a.chunk.js"
+    "revision": "852be528fe9d474bb181",
+    "url": "/Facescape.github.io/static/js/main.464d284e.chunk.js"
   },
   {
     "revision": "77ff1981b7b35be3e015",

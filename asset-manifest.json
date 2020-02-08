@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/Facescape.github.io/static/js/main.daf4d65a.chunk.js",
-    "main.js.map": "/Facescape.github.io/static/js/main.daf4d65a.chunk.js.map",
+    "main.js": "/Facescape.github.io/static/js/main.464d284e.chunk.js",
+    "main.js.map": "/Facescape.github.io/static/js/main.464d284e.chunk.js.map",
     "runtime-main.js": "/Facescape.github.io/static/js/runtime-main.0e79639c.js",
     "runtime-main.js.map": "/Facescape.github.io/static/js/runtime-main.0e79639c.js.map",
     "static/js/2.4f81e427.chunk.js": "/Facescape.github.io/static/js/2.4f81e427.chunk.js",
     "static/js/2.4f81e427.chunk.js.map": "/Facescape.github.io/static/js/2.4f81e427.chunk.js.map",
     "index.html": "/Facescape.github.io/index.html",
-    "precache-manifest.7541b64246ec51124ffaac2ad68feebd.js": "/Facescape.github.io/precache-manifest.7541b64246ec51124ffaac2ad68feebd.js",
+    "precache-manifest.e70523d2d4b565cac70845f19faa8ad0.js": "/Facescape.github.io/precache-manifest.e70523d2d4b565cac70845f19faa8ad0.js",
     "service-worker.js": "/Facescape.github.io/service-worker.js",
     "static/js/2.4f81e427.chunk.js.LICENSE.txt": "/Facescape.github.io/static/js/2.4f81e427.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0e79639c.js",
     "static/js/2.4f81e427.chunk.js",
-    "static/js/main.daf4d65a.chunk.js"
+    "static/js/main.464d284e.chunk.js"
   ]
 }
