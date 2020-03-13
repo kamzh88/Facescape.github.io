@@ -18,7 +18,6 @@ const styles = {
         color: "#fff",
         fontSize: "100%"
     }
-    
 }
 
 function Navbar(props) {
